@@ -46,7 +46,7 @@ export async function voteOnPoll(app: FastifyInstance) {
     }
 
     if (!sessionId) {
-      sessionId = randomUUID();
+      sessionId = randomUUID(); // create a random id
 
       reply.setCookie("sessionId", sessionId, {
         path: "/",
